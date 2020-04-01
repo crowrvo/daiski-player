@@ -1,0 +1,104 @@
+.viewer {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.daiski__player {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+    cursor: none;
+}
+
+.daiski__player.show {
+    cursor: default;
+}
+
+.controls {
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+}
+
+.controls.show {
+    opacity: 1;
+}
+
+.viewer:hover .controls {
+    background-color: purple;
+}
+
+/* Player timeline */
+.progress {
+    position: absolute;
+    display: grid;
+    background-color: rgba(255,255,255,.75);
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    bottom: 10%;
+    left: 10%;
+    width: 400px;
+    border-radius: 20px;
+}
+
+.progress__filled {
+    grid-row: 1;
+    grid-column: 1;
+    position: relative;
+    background-color: #9a00ff;
+    height: 5px;
+    cursor: pointer;
+    box-shadow: inset 0 0 3px 2px purple;
+    border-radius: 20px;
+}
+
+.progress__control {
+    grid-row: 1;
+    grid-column: 1;
+    -webkit-appearance: none;
+    background-color: transparent;
+    z-index: 1;
+    outline: none;
+    border: none;
+    display: block;
+    margin: 0;
+    position: relative;
+    border-radius: 20px;
+}
+
+.progress__control::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    width: 9px;
+    height: 5px;
+    background-color: rgb(85, 2, 87);
+    cursor: pointer;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-left: -1px;
+}
+
+.progress:hover .progress__control::-webkit-slider-thumb,
+.progress__filled .progress__control::-webkit-slider-thumb,
+.progress__control::-webkit-slider-thumb:hover {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    margin-top: -4px;
+}
+
+.player__button {
+    position: absolute;
+    margin: 10px;
+    color: white;
+    font-size: 65px;
+    bottom: 5%;
+    right: 5%;
+}
