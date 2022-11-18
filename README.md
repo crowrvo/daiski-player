@@ -1,24 +1,4 @@
-# daiski-player
-
-## Project setup
-```
+Player de video feito em vuejs 2
+Adicionar um video nomeado video.mp4 na pasta assets/video
 npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+npm serve
